@@ -237,77 +237,13 @@ section { padding:80px 6%; }
 /* STORY SECTION */
 .story-sec { background: var(--white); overflow: hidden; }
 .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: center; min-height: 580px; }
-.story-img-wrap { position: relative; height: 580px; overflow: hidden; }
-.story-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
-/* Radial vignette: clear center, faded edges only */
-.story-img-wrap::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to right, var(--white) 0%, transparent 18%, transparent 82%, var(--white) 100%),
-    linear-gradient(to bottom, var(--white) 0%, transparent 12%, transparent 88%, var(--white) 100%);
-  pointer-events: none;
-}
-.story-text { padding: 60px 56px 60px 44px; }
-.story-text .slabel { margin-bottom: 12px; }
-.story-text .sh2 { margin-bottom: 20px; max-width: 100%; }
-.story-para { font-size: 15px; color: var(--tmuted); line-height: 1.75; margin-bottom: 16px; }
-.story-para em { color: var(--g-light); font-style: italic; }
-.story-signature { display: flex; align-items: center; gap: 16px; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--cream-d); }
-.story-sig-avatars { display: flex; }
-.story-sig-av { width: 40px; height: 40px; border-radius: 50%; background: var(--g-dark); border: 2px solid var(--white); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 14px; color: #A8D5B8; font-weight: 600; margin-left: -10px; }
-.story-sig-av:first-child { margin-left: 0; }
-.story-sig-text { font-size: 14px; color: var(--tmuted); line-height: 1.4; }
-.story-sig-text strong { color: var(--td); font-weight: 600; display: block; }
-@media(max-width:960px){
-  .story-grid { grid-template-columns: 1fr; }
-  .story-img-wrap { height: 360px; }
-  .story-img-wrap::after { background: linear-gradient(to bottom, var(--white) 0%, transparent 15%, transparent 85%, var(--white) 100%); }
-  .story-text { padding: 36px 5%; }
-}
-
-/* SVG check shorthand */
-.chk { display:block; }
-
-/* RESPONSIVE */
-@media(max-width:960px){
-  .hero{grid-template-columns:1fr;padding-top:60px;}
-  .hero-visual{display:none;}
-  .prob-grid{grid-template-columns:1fr;}
-  .prob-hl{flex-direction:column;text-align:center;}
-  .emp-grid{grid-template-columns:1fr;}
-  .fw-grid{grid-template-columns:1fr;}
-  .steps{grid-template-columns:1fr 1fr;gap:24px;}
-  .steps::before{display:none;}
-  .ben-grid{grid-template-columns:1fr 1fr;}
-  .spec-row{grid-template-columns:1fr 1fr;}
-  .trans-grid{grid-template-columns:1fr 1fr;}
-  .plans-grid{grid-template-columns:1fr;max-width:480px;}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
-}
-@media(max-width:600px){
-  section{padding:60px 5%;}
-  .steps{grid-template-columns:1fr;}
-  .ben-grid{grid-template-columns:1fr;}
-  .spec-row{grid-template-columns:1fr;}
-  .trans-grid{grid-template-columns:1fr;}
-  .footer-grid{grid-template-columns:1fr;}
-  .footer-bot{flex-direction:column;align-items:flex-start;}
-}
-
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-.hero-badge{animation:fadeUp .6s ease both;}
-.hero h1{animation:fadeUp .6s .08s ease both;}
-.hero-sub{animation:fadeUp .6s .16s ease both;}
-.hero-bullets{animation:fadeUp .6s .22s ease both;}
-.hero-cta-group{animation:fadeUp .6s .3s ease both;}
 .story-img-wrap {
   width: 100% !important;
   height: 520px !important;
-  border-radius: 28px !important;
+  position: relative !important;
   overflow: hidden !important;
-  background: #f7f3ed !important;
+  border-radius: 0 !important;
+  background: transparent !important;
 }
 
 .story-img-wrap img {
@@ -317,23 +253,21 @@ section { padding:80px 6%; }
   object-position: center center !important;
   display: block !important;
   opacity: 1 !important;
-  filter: none !important;
-  mask-image: none !important;
-  -webkit-mask-image: none !important;
 }
 
-.story-img-wrap::before,
 .story-img-wrap::after {
-  display: none !important;
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(to right, #f7f3ed 0%, rgba(247,243,237,0) 18%, rgba(247,243,237,0) 78%, #f7f3ed 100%),
+    linear-gradient(to bottom, rgba(247,243,237,0) 55%, #f7f3ed 100%) !important;
 }
 
 @media (max-width: 768px) {
   .story-img-wrap {
     height: 380px !important;
-  }
-
-  .story-img-wrap img {
-    object-position: center center !important;
   }
 }</style>
 </head>
