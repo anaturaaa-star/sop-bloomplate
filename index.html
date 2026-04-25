@@ -302,7 +302,40 @@ section { padding:80px 6%; }
 .hero-sub{animation:fadeUp .6s .16s ease both;}
 .hero-bullets{animation:fadeUp .6s .22s ease both;}
 .hero-cta-group{animation:fadeUp .6s .3s ease both;}
-</style>
+.story-img-wrap {
+  width: 100% !important;
+  height: 520px !important;
+  border-radius: 28px !important;
+  overflow: hidden !important;
+  background: #f7f3ed !important;
+}
+
+.story-img-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+  opacity: 1 !important;
+  filter: none !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+}
+
+.story-img-wrap::before,
+.story-img-wrap::after {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .story-img-wrap {
+    height: 380px !important;
+  }
+
+  .story-img-wrap img {
+    object-position: center center !important;
+  }
+}</style>
 </head>
 <body>
 
