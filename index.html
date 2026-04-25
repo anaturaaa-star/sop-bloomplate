@@ -276,6 +276,55 @@ section { padding:80px 6%; }
   .story-img-wrap {
     height: 380px !important;
   }
+  .story-signature {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.story-sig-avatars {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.story-sig-av {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #183126;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid #ffffff;
+  margin-left: -8px;
+}
+
+.story-sig-av:first-child {
+  margin-left: 0;
+}
+
+.story-sig-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.story-sig-text strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f1f1f;
+}
+
+.story-sig-text span {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #6f6f6f;
+}
 }</style>
 </head>
 <body>
@@ -519,13 +568,17 @@ section { padding:80px 6%; }
       <p class="story-para">În jurul Bloomplate s-a format și o comunitate de femei care își doresc același lucru: să mănânce mai sănătos, fără să simtă că sunt singure în proces.</p>
       <p class="story-para">Mesajul nostru este simplu: mâncatul sănătos nu trebuie să fie complicat, plictisitor sau un lux. Poate fi gustos, practic și potrivit pentru viața ta de zi cu zi.</p>
       <div class="story-signature">
-        <div class="story-sig-avatars">
-          <div class="story-sig-av">M</div>
-          <div class="story-sig-av">M</div>
-          <div class="story-sig-av">O</div>
-        </div>
-        <div class="story-sig-text"><strong>Maria, Maia și Olivia</strong>Fondatoarele Bloomplate</div>
-      </div>
+  <div class="story-sig-avatars">
+    <div class="story-sig-av">M</div>
+    <div class="story-sig-av">M</div>
+    <div class="story-sig-av">O</div>
+  </div>
+
+  <div class="story-sig-text">
+    <strong>Maria, Maia și Olivia</strong>
+    <span>Fondatoarele Bloomplate</span>
+  </div>
+</div>
     </div>
   </div>
 </section>
